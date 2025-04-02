@@ -29,16 +29,16 @@
     traverse(root, t => convertText(t, dict));
     localStorage.setItem("lang_pref", toTrad ? "simplified" : "traditional");
     const btn = document.getElementById("langToggleFloating");
-    if (btn) btn.innerText = toTrad ? "切換為簡體" : "切換為繁體";
+    if (btn) btn.innerText = toTrad ? "切換為繁體" : "切換為簡體";
   }
 
   function insertFloatingButton() {
     if (document.getElementById("langToggleFloating")) return;
     const btn = document.createElement("button");
     btn.id = "langToggleFloating";
-    btn.innerText = "切換為簡體";
+    btn.innerText = localStorage.getItem("lang_pref") === "simplified" ? "切換為繁體" : "切換為簡體";
     Object.assign(btn.style, {
-      position: "fixed", top: "16px", right: "16px", zIndex: 9999,
+      position: "fixed", bottom: "24px", right: "24px", zIndex: 9999,
       background: "#111", color: "#fff", border: "none", borderRadius: "20px",
       padding: "10px 16px", cursor: "pointer", boxShadow: "0 2px 12px rgba(0,0,0,0.25)", fontSize: "14px"
     });
@@ -68,4 +68,6 @@
     }
     switchLanguage(pref === "simplified");
   });
+})();
+
 })();
