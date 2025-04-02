@@ -29,7 +29,7 @@
     traverse(root, t => convertText(t, dict));
     localStorage.setItem("lang_pref", toTrad ? "simplified" : "traditional");
     const btn = document.getElementById("langToggleFloating");
-    if (btn) btn.innerText = toTrad ? "切換為繁體" : "切换为简体";
+    if (btn) btn.innerText = toTrad ? "繁體/简体" : "简体/繁體";
   }
 
   function insertFloatingButton() {
@@ -37,7 +37,7 @@
     const btn = document.createElement("button");
     btn.id = "langToggleFloating";
     const currentPref = localStorage.getItem("lang_pref");
-    btn.innerText = currentPref === "simplified" ? "切換為繁體" : "切换为简体";
+    btn.innerText = currentPref === "simplified" ? "繁體/简体" : "简体/繁體";
     Object.assign(btn.style, {
       position: "fixed",
       top: "60px",
