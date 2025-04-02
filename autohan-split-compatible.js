@@ -38,7 +38,7 @@
     btn.id = "langToggleFloating";
     btn.innerText = "切換為簡體";
     Object.assign(btn.style, {
-      position: "fixed", bottom: "24px", right: "24px", zIndex: 9999,
+      position: "fixed", top: "16px", right: "16px", zIndex: 9999,
       background: "#111", color: "#fff", border: "none", borderRadius: "20px",
       padding: "10px 16px", cursor: "pointer", boxShadow: "0 2px 12px rgba(0,0,0,0.25)", fontSize: "14px"
     });
